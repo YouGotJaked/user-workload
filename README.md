@@ -23,9 +23,11 @@ Where `<SIZE>` is the size of the file in bytes and `<BASE>` a valid multiplier 
 - `G` [Gigabyte, 1024*1024]
 - And so on for `T`, `P`, `E`, `Z`, `Y`
 
-For example, to test a 500 Megabyte file you would type `./script.sh 500 M`.
+For example, to test a 500 Megabyte file using the `gen_file.sh` script you would type `./gen_file.sh 500 M`.
 
 ## Results
+
+Three file sizes were tested and compared using this script: 1G, 5G, and 10G. Each respective file size was tested three times. The read and write speeds of each trial were recorded and averaged.
 
 ### 1 G
 
@@ -61,7 +63,7 @@ For example, to test a 500 Megabyte file you would type `./script.sh 500 M`.
 
 #### Average
 
-The 1 G file averaged a write speed of 3.0 MB/s and read speed of 5.3 MB/s.
+The 1G file averaged a write speed of 3.0 MB/s and read speed of 5.3 MB/s.
 
 ### 5 G
 
@@ -97,7 +99,7 @@ The 1 G file averaged a write speed of 3.0 MB/s and read speed of 5.3 MB/s.
 
 #### Average
 
-The 5 G file averaged a write speed of 2.7 MB/s and read speed of 4.9 MB/s.
+The 5G file averaged a write speed of 2.7 MB/s and read speed of 4.9 MB/s.
 
 ### 10 G
 
@@ -133,6 +135,6 @@ The 5 G file averaged a write speed of 2.7 MB/s and read speed of 4.9 MB/s.
 
 #### Average
 
-The 10 G files averaged a write speed of 2.6 MB/s and read speed of 4.9 MB/s.
+The 10G files averaged a write speed of 2.6 MB/s and read speed of 4.9 MB/s.
 
 ## Conclusion
