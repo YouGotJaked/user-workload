@@ -6,6 +6,7 @@ if [ "$#" -ne 2 ]; then
   exit 1
 fi
 
+#output filename is <SIZE><BASE>.dat, ex: 500 Megabyte file will be 500M.dat
 out="$1$2.dat"
 
 #test write speed, use sync to write data buffered in memory out to disk
