@@ -23,6 +23,8 @@ Where `<SIZE>` is the size of the file in bytes and `<BASE>` a valid multiplier 
 - `G` [Gigabyte, 1024*1024]
 - And so on for `T`, `P`, `E`, `Z`, `Y`
 
+For example, to test a 500 Megabyte file you would type `./script.sh 500 M`.
+
 ## Results
 
 ### 1 G
