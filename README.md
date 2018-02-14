@@ -13,7 +13,7 @@ To run the .sh script, open up Terminal and navigate to the project directory:
 cd /home/username/yourdirectory
 ```
 
-Once in the correct directory, type in the following command with "program" being the name of the script being run:
+Once in the correct directory, type in the following command with "script" being the name of the script being run:
 ```
 ./script.sh <SIZE> <BASE>
 ```
