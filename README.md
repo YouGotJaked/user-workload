@@ -32,7 +32,7 @@ Three file sizes were tested and compared using this script: 1G, 5G, and 10G. Ea
 ### 1 G
 
 #### Trial 1
-> $ ./gen_file.sh 1 G  
+>$ ./gen_file.sh 1 G  
 2+0 records in  
 2+0 records out  
 1024 bytes (1.0 kB) copied, 0.000405013 s, 2.5 MB/s  
@@ -42,7 +42,7 @@ Three file sizes were tested and compared using this script: 1G, 5G, and 10G. Ea
 1.0G	/local/weka/1G.dat 
 
 #### Trial 2
-> $ ./gen_file.sh 1 G  
+>$ ./gen_file.sh 1 G  
 2+0 records in  
 2+0 records out  
 1024 bytes (1.0 kB) copied, 0.000303603 s, 3.4 MB/s  
@@ -52,7 +52,7 @@ Three file sizes were tested and compared using this script: 1G, 5G, and 10G. Ea
 1.0G	/local/weka/1G.dat
 
 #### Trial 3
-> $ ./gen_file.sh 1 G  
+>$ ./gen_file.sh 1 G  
 2+0 records in  
 2+0 records out  
 1024 bytes (1.0 kB) copied, 0.000345507 s, 3.0 MB/s  
@@ -88,7 +88,7 @@ The 1G file averaged a write speed of 3.0 MB/s and read speed of 5.3 MB/s.
 5.0G	/local/weka/5G.dat  
 
 #### Trial 3
-> $ ./gen_file.sh 5 G  
+>$ ./gen_file.sh 5 G  
 2+0 records in  
 2+0 records out  
 1024 bytes (1.0 kB) copied, 0.000299901 s, 3.4 MB/s  
@@ -138,3 +138,7 @@ The 5G file averaged a write speed of 2.7 MB/s and read speed of 4.9 MB/s.
 The 10G files averaged a write speed of 2.6 MB/s and read speed of 4.9 MB/s.
 
 ## Conclusion
+
+Small file sizes are able to be written rather quickly. As the file size increases, write speed decreases as it becomes more difficult to find enough blocks to write the file. Larger files need to be broken up and cannot be written contiguously. The `sync` command is essential in testing these files because it writes any data buffered in memory to disk. If it were omitted,  the reported speeds could be much faster, incorrectly display the speed of reading/writing the data in RAM.
+
+The read speed for all three file sizes was significantly faster than their respective write speeds. This makes sense as the data simply needs to be read from the disk without the need for additional processing. Like with write speed, read speed also decreases as file size increases. 
