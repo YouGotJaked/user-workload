@@ -1,5 +1,5 @@
 # user-workload
-This sell script is designed to test the impact of user workload on file system performance. 
+This shell script is designed to test the impact of user workload on file system performance. 
 
 ## Prerequisites
 
